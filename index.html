@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado de Hill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cifrado de Hill</h1>
+            <p>Encripta y desencripta mensajes utilizando matrices (Módulo 27 con Ñ)</p>
+        </header>
+
+        <main>
+            <div class="section">
+                <label for="inputText">Mensaje:</label>
+                <textarea id="inputText" placeholder="Ingresa tu texto aquí (Ej: SEÑAL SECRETA)"></textarea>
+            </div>
+
+            <div class="section">
+                <label for="matrixType">Tamaño de la Matriz:</label>
+                <select id="matrixType">
+                    <option value="2">2x2</option>
+                    <option value="3">3x3</option>
+                </select>
+
+                <div class="matrix-container" id="matrixContainer">
+                    </div>
+                <p class="hint">Recomendación 2x2: [2, 3] [1, 4] | 3x3: [3, 4, 5] [2, 3, 4] [1, 1, 2]</p>
+            </div>
+
+            <div class="actions">
+                <button id="btnEncrypt" class="btn primary">Encriptar</button>
+                <button id="btnDecrypt" class="btn secondary">Desencriptar</button>
+            </div>
+
+            <div class="section">
+                <label for="outputText">Resultado:</label>
+                <textarea id="outputText" readonly placeholder="El resultado aparecerá aquí"></textarea>
+            </div>
+        </main>
+    </div>
+
+    <script src="hillCipher.js"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
